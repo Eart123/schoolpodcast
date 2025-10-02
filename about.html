@@ -16,11 +16,40 @@
     nav a{ color:#fff; text-decoration:none; font-weight:600; padding:8px; border-radius:8px;}
     main{ max-width:var(--maxw); margin:30px auto; padding:16px;}
     .card{ background:var(--card); border-radius:var(--radius); padding:20px; box-shadow:0 6px 18px rgba(12,18,31,0.06);}
-    .hero-img{ width:100%; height:300px; object-fit:cover; border-radius:10px; margin-bottom:12px;}
-    h1{ color:var(--primary); margin:0 0 10px 0;}
+    h1{ color:var(--primary); margin:0 0 20px 0;}
     p{ color:var(--muted); line-height:1.6;}
+
+    
+    .image-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .image-row img {
+      width: 48%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    
+    .image-row img:hover,
+    .image-row img.active {
+      transform: scale(1.2);           
+      z-index: 5;                      
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
     footer{ text-align:center; padding:18px; color:#fff; background:var(--primary); margin-top:26px;}
-    @media(max-width:600px){ .hero-img{ height:180px; } .logo{ height:40px; width:40px; } }
+    @media(max-width:600px){ 
+      .image-row img{ width: 100%; height: 200px; }
+      .logo{ height:40px; width:40px; } 
+    }
   </style>
 </head>
 <body>
@@ -40,7 +69,10 @@
       <h1>About Denizli Aydem Science High School</h1>
 
       
-      <img src="sonslam.png" alt="Denizli Aydem Science High School" class="hero-img" />
+      <div class="image-row">
+        <img src="okul3.png" alt="resim1" />
+        <img src="okul4.png" alt="resim2" />
+      </div>
 
       <p>
         Denizli Aydem Science High School was established in 2011 with the mission of educating successful,
@@ -61,7 +93,25 @@
 
   <footer>
     <div> This website was created by <strong>Erdem Ata Öztürk</strong>.</div>
-  </footer>
+  <script>
+  const images = document.querySelectorAll('.image-row img');
+
+  // Resme tıklanınca aktif yap (diğerlerini kapat)
+  images.forEach(img => {
+    img.addEventListener('click', e => {
+      e.stopPropagation(); // tıklamayı doküman dinleyicisine iletme
+      images.forEach(other => {
+        if (other !== img) other.classList.remove('active');
+      });
+      img.classList.toggle('active');
+    });
+  });
+
+  // Sayfanın herhangi başka yerine tıklanınca tümünü küçült
+  document.addEventListener('click', () => {
+    images.forEach(img => img.classList.remove('active'));
+  });
+</script>
 
 </body>
 </html>
