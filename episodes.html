@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Episodes - School Podcast</title>
+  <style>
+    :root{--primary:#2b6cb0; --bg:#f4f7fa; --card:#fff; --muted:#6b7280; --radius:12px; --maxw:1000px;}
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, sans-serif; background:var(--bg); color:#111827;}
+    header{ background:var(--primary); color:#fff; padding:12px 18px; display:flex; align-items:center; gap:12px;}
+    .logo{ height:48px; width:48px; object-fit:contain; background:#fff; padding:6px; border-radius:8px;}
+    nav{ margin-left:auto; display:flex; gap:10px; }
+    nav a{ color:#fff; text-decoration:none; font-weight:600; padding:8px; border-radius:8px;}
+    main{ max-width:var(--maxw); margin:30px auto; padding:16px;}
+    .card{ background:var(--card); border-radius:var(--radius); padding:20px; box-shadow:0 6px 18px rgba(12,18,31,0.06); margin-bottom:14px;}
+    h1{ color:var(--primary); margin:0 0 12px 0;}
+    .episode{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      padding:12px;
+      border-radius:10px;
+      background:#fbfdff;
+      border:1px solid rgba(11,29,59,0.03);
+    }
+    .thumb{ width:160px; height:90px; object-fit:cover; border-radius:6px; flex-shrink:0; }
+    .meta{ color:var(--muted); }
+    .play-btn{
+      display:inline-block;
+      margin-top:8px;
+      padding:8px 12px;
+      background:var(--primary);
+      color:#fff;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    @media(max-width:700px){
+      .episode{ flex-direction:column; align-items:stretch; }
+      .thumb{ width:100%; height:180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Aydem Logo" class="logo" />
+    <div style="font-weight:700">School Podcast</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>Previous Episodes</h1>
+      <p class="meta">Below are previous podcast episodes. Click "Play" to open an episode (it will open the episode page or embedded video).</p>
+
+      
+      <div class="episode" style="margin-top:12px;">
+        <img class="thumb" src="https://img.youtube.com/vi/jNI0fiX4q4A/hqdefault.jpg" alt="Episode thumbnail">
+        <div>
+          <h3 style="margin:0 0 6px 0">Episode: School Life & Science</h3>
+          <div class="meta">Published: 2025 • Host: Erdem Ata Öztürk</div>
+          <a class="play-btn" href="https://www.youtube.com/watch?v=jNI0fiX4q4A" target="_blank" rel="noopener">Play on YouTube</a>
+        </div>
+      </div>
+
+      
+      <div class="episode" style="margin-top:12px;">
+        <img class="thumb" src="https://via.placeholder.com/320x180?text=Coming+Soon" alt="Coming soon">
+        <div>
+          <h3 style="margin:0 0 6px 0">Episode: Coming Soon</h3>
+          <div class="meta">Published: -</div>
+          <a class="play-btn" href="#" onclick="alert('This episode will be added soon.'); return false;">Details</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer style="text-align:center; padding:18px; background:var(--primary); color:#fff; margin-top:26px;">
+    <div> This website was created by <strong>Erdem Ata Öztürk</strong>.</div>
+  </footer>
+
+</body>
+</html>

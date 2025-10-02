@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>School Podcast - Home</title>
+  <style>
+    :root{
+      --primary: #2b6cb0;
+      --bg: #f4f7fa;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --radius: 12px;
+      --maxw: 1000px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, "Helvetica Neue", Arial, sans-serif;
+      background:var(--bg);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+    }
+    header{
+      background:linear-gradient(90deg, var(--primary), #1f57a6);
+      color:#fff;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .logo{
+      height:56px;
+      width:56px;
+      border-radius:8px;
+      object-fit:contain;
+      background:#fff;
+      padding:6px;
+    }
+    .brand{
+      font-weight:700;
+      font-size:20px;
+    }
+    nav{
+      margin-left:auto;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:8px;
+    }
+    nav a:hover{ background: rgba(255,255,255,0.08); }
+
+    main{
+      max-width:var(--maxw);
+      margin:30px auto;
+      padding:16px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 6px 18px rgba(12,18,31,0.06);
+      margin-bottom:18px;
+    }
+    h1,h2{ color:var(--primary); margin:0 0 12px 0; }
+    p { color:var(--muted); margin:0 0 12px 0; }
+
+    .embed{
+      width:100%;
+      height:420px;
+      border-radius:10px;
+      overflow:hidden;
+      border: none;
+      background:#000;
+    }
+
+    footer{
+      text-align:center;
+      padding:18px 12px;
+      color:#fff;
+      background:var(--primary);
+      margin-top:26px;
+    }
+
+    /* Responsive */
+    @media (max-width:600px){
+      .embed{ height:220px; }
+      .logo{ height:44px; width:44px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    
+    <img src="logo.png" alt="Aydem Science High School Logo" class="logo" />
+    <div>
+      <div class="brand">School Podcast</div>
+      <div style="font-size:12px; color:rgba(255,255,255,0.9)">Denizli Aydem Science High School</div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>Latest Episode</h1>
+      <p>Listen to our latest podcast episode below.</p>
+
+      
+      <iframe style="border-radius:12px" 
+  src="https://open.spotify.com/embed/track/4uLU6hMCjMI75M1A2tKUQC?utm_source=generator" 
+  width="100%" 
+  height="152" 
+  frameBorder="0" 
+  allowfullscreen="" 
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+  loading="lazy">
+</iframe>
+    </section>
+    
+    <section class="card">
+      <h2>Etkinlik</h2>
+      <p>
+      Podcastle alaklı etkinliğin linki  
+      </p>
+    </section>
+    
+<section class="card">
+      <h2>Kahhot</h2>
+      <p>
+       kahoot linki
+      </p>
+    </section>
+    
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        This podcast shares stories, student interviews, and lessons from our school community.
+        Explore the episodes page for older podcast recordings and visit About to learn more
+        about Denizli Aydem Science High School.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div>This website was created by <strong>Erdem Ata Öztürk</strong>.</div>
+  </footer>
+
+</body>
+</html>
