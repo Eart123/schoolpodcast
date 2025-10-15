@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="Denizli Aydem Science High School Podcast - English , technology, education, and student projects. Listen to our latest episodes and learn about our school.">
+  <meta name="keywords" content="Denizli Aydem Science High School, podcast, science, education,english podcast, school projects, student podcast, Turkey, high school, Aydem Fen Lisesi">
+  <meta name="author" content="Erdem Ata Öztürk">
+  <meta name="robots" content="index, follow">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>School Podcast - Home</title>
+  <style>
+    :root {
+      --primary: #2b6cb0;
+      --bg: #f4f7fa;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --radius: 12px;
+      --maxw: 1000px;
+    }
+    *{box-sizing:border-box;}
+    body {
+      margin:0;
+      font-family:Inter, "Helvetica Neue", Arial, sans-serif;
+      background:var(--bg);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+    }
+    header {
+      background:linear-gradient(90deg, var(--primary), #1f57a6);
+      color:#fff;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .logo {
+      height:56px;
+      width:56px;
+      border-radius:8px;
+      object-fit:contain;
+      background:#fff;
+      padding:6px;
+    }
+    .brand {
+      font-weight:700;
+      font-size:20px;
+    }
+    nav {
+      margin-left:auto;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:8px;
+    }
+    nav a:hover { background: rgba(255,255,255,0.08); }
+
+    main {
+      max-width:var(--maxw);
+      margin:30px auto;
+      padding:16px;
+    }
+
+    /* 🖼️ Yatay banner resmi */
+.banner {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;  /* 🔁 cover yerine bu */
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+    .card {
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 6px 18px rgba(12,18,31,0.06);
+      margin-bottom:18px;
+    }
+    h1, h2 { color:var(--primary); margin:0 0 12px 0; }
+    p { color:var(--muted); margin:0 0 12px 0; }
+
+    footer {
+      text-align:center;
+      padding:18px 12px;
+      color:#fff;
+      background:var(--primary);
+      margin-top:26px;
+    }
+
+    /* 🎧 Custom player */
+    .player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .player img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+    .player h3 {
+      margin: 8px 0 0 0;
+      font-size: 20px;
+      color: var(--primary);
+      text-align: center;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .controls button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      font-size: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .controls button:hover {
+      background: #1f57a6;
+    }
+    .progress-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .progress {
+      width: 100%;
+      height: 6px;
+      background: #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+    }
+    .progress-filled {
+      height: 6px;
+      background: var(--primary);
+      width: 0%;
+      border-radius: 4px;
+    }
+    .time {
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .speed-control {
+      margin-top: 8px;
+    }
+    select {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width:600px){
+      .logo{ height:44px; width:44px; }
+      .player img { width: 160px; height: 160px; }
+      .banner { max-height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Aydem Science High School Logo" class="logo" />
+    <div>
+      <div class="brand">School Podcast</div>
+      <div style="font-size:12px; color:rgba(255,255,255,0.9)">Denizli Aydem Science High School</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="episodes.html">Episodes</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 🖼️ Yatay görsel buraya -->
+    <img src="banner.png" alt="Podcast Banner" class="banner">
+
+    <section class="card">
+      <h1>Previous Episode</h1>
+      <p>Listen to our previous podcast episode below.</p>
+
+      <div class="player">
+        <img src="cover.jpg" alt="Podcast Cover">
+        <h3>Episode 1 - Science & Future</h3>
+        <audio id="audio" src="podcast.mp3"></audio>
+
+        <div class="controls">
+          <button id="back10">⏪</button>
+          <button id="play">▶️</button>
+          <button id="forward10">⏩</button>
+        </div>
+
+        <div class="progress-container">
+          <div class="progress" id="progress">
+            <div class="progress-filled" id="progress-filled"></div>
+          </div>
+          <div class="time">
+            <span id="current-time">0:00</span>
+            <span id="total-time">0:00</span>
+          </div>
+        </div>
+
+        <div class="speed-control">
+          <label for="speed">Speed:</label>
+          <select id="speed">
+            <option value="0.75">0.75x</option>
+            <option value="1" selected>1x</option>
+            <option value="1.25">1.25x</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2x</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Activity</h2>
+      <p>Podcast activity link</p>
+    </section>
+    
+    <section class="card">
+      <h2>Kahoot</h2>
+      <p>Kahoot link</p>
+    </section>
+    
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        Our podcast features stories, student interviews, and reflections from our school community. Browse the Episodes page to listen to past recordings, and visit the About section to learn more about Denizli Aydem Science High School.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div>This website was created by <strong>Erdem Ata Öztürk</strong>.</div>
+  </footer>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play');
+    const back10 = document.getElementById('back10');
+    const forward10 = document.getElementById('forward10');
+    const progress = document.getElementById('progress');
+    const progressFilled = document.getElementById('progress-filled');
+    const currentTimeEl = document.getElementById('current-time');
+    const totalTimeEl = document.getElementById('total-time');
+    const speed = document.getElementById('speed');
+
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = '⏸';
+      } else {
+        audio.pause();
+        playBtn.textContent = '▶️';
+      }
+    });
+
+    back10.addEventListener('click', () => { audio.currentTime -= 10; });
+    forward10.addEventListener('click', () => { audio.currentTime += 10; });
+
+    audio.addEventListener('timeupdate', () => {
+      const progressPercent = (audio.currentTime / audio.duration) * 100;
+      progressFilled.style.width = `${progressPercent}%`;
+
+      let currentMin = Math.floor(audio.currentTime / 60);
+      let currentSec = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
+      let totalMin = Math.floor(audio.duration / 60);
+      let totalSec = Math.floor(audio.duration % 60).toString().padStart(2, '0');
+
+      currentTimeEl.textContent = `${currentMin}:${currentSec}`;
+      totalTimeEl.textContent = isNaN(audio.duration) ? "0:00" : `${totalMin}:${totalSec}`;
+    });
+
+    progress.addEventListener('click', (e) => {
+      const width = progress.clientWidth;
+      const clickX = e.offsetX;
+      audio.currentTime = (clickX / width) * audio.duration;
+    });
+
+    speed.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(speed.value);
+    });
+  </script>
+</body>
+</html>
